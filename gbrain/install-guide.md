@@ -130,7 +130,7 @@ gbrain config set chat.base_url https://api.deepseek.com/v1
 
 ## 5. Import seed data WITHOUT embeddings, verify graph + lexical search
 
-Start with a tiny, safe corpus to prove the pipeline. **Do not import secrets or the whole home dir.** Also do not import preferences into GBrain in Phase 1: per `hivemind-loop-plan.md`, preferences belong in `USER.md`/Honcho, while GBrain should own relationships and curated factual recall.
+Start with a tiny, safe corpus to prove the pipeline. **Do not import secrets or the whole home dir.** Also do not import preferences into GBrain in Phase 1: per `../loops/loop-plan.md`, preferences belong in `USER.md`/Honcho, while GBrain should own relationships and curated factual recall.
 
 Good first corpus: a sanitized copy of `MEMORY.md` only. Review it before import and remove secrets, ephemeral approvals, and preference-like facts.
 
@@ -230,4 +230,4 @@ Only after §1–6 are confirmed working and the operator approves spend:
 - A `gbrain` Hermes profile exists with the GBrain MCP server registered (default profile untouched).
 - Operator has all reports and has approved before any profile mutation, LLM synthesis, nightly, or paid step.
 
-> This GBrain instance is the **"relationships" layer** of the HiveMind stack (see `hivemind-loop-plan.md` §3). The next milestone is the **memory-consolidation loop**: a scheduled maker/checker loop that cleans `MEMORY.md` and projects curated facts into this graph — at which point the dirty seed data from §5 becomes the first real job.
+> This GBrain instance is the **"relationships" layer** of the HiveMind stack (see `../loops/loop-plan.md` §3). The next milestone is the **memory-consolidation loop**: a scheduled maker/checker loop that cleans `MEMORY.md` and projects curated facts into this graph — at which point the dirty seed data from §5 becomes the first real job.

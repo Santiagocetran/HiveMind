@@ -2,7 +2,7 @@
 
 **Author:** Claude Code (HiveMind project), 2026-06-10.
 **Grounded in:** GBrain README/architecture + your live install on `mona` (`gbrain v0.42.38.0`, schema pack `gbrain-base-v2`, 89 MCP tools, PGLite, conservative mode, embeddings off).
-**Companion docs:** `gbrain-install-guide.md` (setup), `hivemind-loop-plan.md` (where GBrain fits the stack).
+**Companion docs:** `install-guide.md` (setup), `../loops/loop-plan.md` (where GBrain fits the stack).
 
 ---
 
@@ -98,7 +98,7 @@ Two retrieval verbs, very different cost/behavior:
 
 Runs durably on the **Minions job queue** (`gbrain jobs …`: submit/list/get/cancel/retry, two-phase pending→done). This is literally "loop engineering" inside GBrain — and it's the part that **spends LLM tokens unattended**, which is exactly why your install keeps it deferred until you choose to enable it.
 
-> This is the model for the **memory-consolidation loop** in `hivemind-loop-plan.md`: dream is GBrain's version of it. Our loop will *feed* well-formed pages in so dream has good material to work on.
+> This is the model for the **memory-consolidation loop** in `../loops/loop-plan.md`: dream is GBrain's version of it. Our loop will *feed* well-formed pages in so dream has good material to work on.
 
 ---
 
@@ -175,7 +175,7 @@ Honest map of what you can actually use *right now* (no embeddings, no LLM spend
 ## 11. How to get full potential (practical roadmap)
 
 1. **Capture relentlessly, structure lightly.** The graph is only as good as its input. Use path prefixes (`people/`, `concepts/`, `daily/`) so type inference and recency decay work. Use `[[wikilinks]]` so auto-link wires edges for free.
-2. **Fix the empty-graph problem.** Your current brain is 1 blob page, 0 links — because raw `MEMORY.md` was dumped in. GBrain needs *discrete, well-formed pages* to build a graph. This is exactly what the **memory-consolidation loop** (`hivemind-loop-plan.md`) is for: it produces clean per-fact pages instead of one blob.
+2. **Fix the empty-graph problem.** Your current brain is 1 blob page, 0 links — because raw `MEMORY.md` was dumped in. GBrain needs *discrete, well-formed pages* to build a graph. This is exactly what the **memory-consolidation loop** (`../loops/loop-plan.md`) is for: it produces clean per-fact pages instead of one blob.
 3. **Add an embeddings provider when semantic recall starts to hurt.** Keyword + graph carries you far; add ZeroEntropy (`ze-…`, GBrain's default reranker+embedder) when you notice "I know it's in there but search can't find it."
 4. **Turn on the dream cycle deliberately** — start `--dry-run`, read what it proposes (dedupes, contradictions), then let it run on a schedule. Remember: cron doesn't inherit `GBRAIN_HOME` — set it in the job.
 5. **Adopt the 3 core skills** (signal-detector, brain-ops, conventions) so agents capture and look-up consistently.
