@@ -91,8 +91,10 @@ STATUS.md              ← current state + roadmap (the living, evolving doc)
 gbrain/
   explained.md         ← what GBrain is and how to get its full potential
   install-guide.md     ← agent-executable install runbook (no-spend, isolated)
+  first-cycle-explained.md ← what the first consolidation cycle did + the graph + glossary
 loops/
   loop-plan.md         ← loop engineering applied to Hermes; the consolidation loop
+  consolidation-write-policy.md ← the curation rules (the future loop's skill)
 archive/
   hivemind-first-plan.md ← the original Grok plan (kept for provenance)
 ```
